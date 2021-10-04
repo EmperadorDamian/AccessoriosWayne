@@ -1,0 +1,119 @@
+html {
+    font-size: 75%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding-top: 8vh;
+    margin: 0;
+    line-height: 1.6;
+    font-family: "Raleway", sans-serif;
+}
+
+.logo {
+    width: 120px;
+    height: 68px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 8vh;
+    background-color: black;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 110;
+}
+
+.ham {
+    display: none;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.ham span {
+    display: block;
+    background-color: #f3f3f3;
+    height: 3px;
+    width: 28px;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.enlaces-menu {
+    display: flex;
+    padding: 0;
+}
+
+.enlaces-menu li {
+    padding: 5px 40px;
+    list-style-type: none;
+    transition: 0.3s;
+}
+
+.enlaces-menu li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #f3f3f3;
+    font-weight: 570;
+}
+
+.enlaces-menu li a:hover {
+    color: #aaa;
+}
+
+.enlaces-menu li i {
+    color: #f3f3f3;
+    margin: 10px;
+    padding: 5px;
+}
+
+
+/*submenus*/
+
+.submenu {
+    position: absolute;
+    background: black;
+    padding: 1px;
+    list-style: none;
+    height: 290px;
+    font-size: 18px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+    width: 300px;
+    z-index: 110;
+}
+
+.submenu li a {
+    display: block;
+    padding: 6px;
+    margin: 6px;
+    color: #fff;
+    text-decoration: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.nav__ul li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav__ul li:hover .submenu li a {
+    visibility: visible;
+    opacity: 1;
+}
